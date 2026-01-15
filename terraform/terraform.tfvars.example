@@ -1,0 +1,21 @@
+# Copy this file to terraform.tfvars and customize
+
+aws_region   = "us-west-2"
+cluster_name = "my-eks-cluster"
+bucket_name  = "my-rbac-test-bucket-12345"  # Must be globally unique
+
+# Optional: Customize VPC settings
+# vpc_cidr = "10.0.0.0/16"
+# availability_zones = ["us-west-2a", "us-west-2b"]
+
+# Optional: Customize node groups
+# node_groups = {
+#   main = {
+#     instance_types = ["t3.medium"]
+#     scaling_config = {
+#       desired_size = 2
+#       max_size     = 4
+#       min_size     = 1
+#     }
+#   }
+# }
