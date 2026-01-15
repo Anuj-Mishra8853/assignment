@@ -28,13 +28,14 @@
   - rbac-b: Full access to all resources
   - Other namespaces: No access
 
-### 5. Validation & Testing
+### 5. Validation & Testing 
 - **Test Pod**: Ubuntu pod with kubectl and AWS CLI
 - **Custom Docker Image**: `anujmishra/rbac-test-pod:latest`
+- **Test Scripts Location**: `docker/test-rbac.sh` and `docker/test-s3.sh` (copied to `/scripts/` inside container)
 - **Automated Tests**: 
-  - `/scripts/test-rbac.sh` - Tests all RBAC permissions
-  - `/scripts/test-s3.sh` - Tests S3 read/write access
-- **Manual Testing**: Interactive shell access for verification
+  - `kubectl exec rbac-test-pod -n default -- /scripts/test-rbac.sh` - Tests all RBAC permissions
+  - `kubectl exec rbac-test-pod -n default -- /scripts/test-s3.sh` - Tests S3 read/write access
+- **Manual Testing**: `kubectl exec -it rbac-test-pod -n default -- /bin/bash` for interactive shell
 
 ### 6. Documentation
 - **Deployment guide**: Step-by-step instructions with expected results
