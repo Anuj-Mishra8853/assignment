@@ -39,6 +39,19 @@ variable "public_subnet_cidrs" {
   default     = ["10.0.0.0/22", "10.0.4.0/22"]
 }
 
+# In variables.tf:
+#variable "database_subnet_cidrs" {
+#  description = "Database subnet CIDR blocks"
+#  type        = list(string)
+#  default     = ["10.0.8.0/24"]  # ~200 IPs
+#}
+
+#variable "cache_subnet_cidrs" {
+#  description = "Cache subnet CIDR blocks" 
+#  type        = list(string)
+#  default     = ["10.0.9.0/24"]  # ~150 IPs
+#}
+
 variable "bucket_name" {
   description = "S3 bucket name for storage testing"
   type        = string
