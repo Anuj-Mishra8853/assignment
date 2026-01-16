@@ -1,8 +1,8 @@
 # Copy this file to terraform.tfvars and customize
 
-aws_region   = "us-west-2"
-cluster_name = "my-eks-cluster"
-bucket_name  = "my-rbac-test-bucket-12345"  # Must be globally unique
+aws_region   = "us-east-1"
+cluster_name = "myxgrowth-eks-cluster"
+bucket_name  = "my-xgrowth-rbac-test-bucket-2026-01"  # Must be globally unique
 
 # Optional: Customize VPC settings
 # vpc_cidr = "10.0.0.0/16"
